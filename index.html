@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  <body class="main-background">
+     <div class="nav">
+       <h1 class="nav">What's for Dinner?</h1>
+       <button class="button">ADD A RECIPE</button>
+     </div>
+     <div class="content">
+      <div class="box choices">
+        <div>
+          <!----------Radio button for choosing which dish to generate----->
+          <h2>What are you looking for?</h2>
+          <ul style="list-style: none; padding-left: 0;">
+            <li class="list-height">
+              <input class="radio" type="radio" name="food" id="side"/>
+              <label for="side"> Side</label>
+            </li>
+            <li class="list-height">
+              <input class="radio" type="radio" name="food" id="mainDish"/>
+              <label for="mainDish"> Main Dish</label>
+            </li>
+            <li class="list-height">
+              <input class="radio" type="radio" name="food" id="dessert"/>
+              <label for="dessert"> Dessert</label>
+            </li>
+            <li class="list-height">
+              <input class="radio" type="radio" name="food" id="entireMeal"/>
+              <label for="entireMeal"> Entire Meal</label>
+            </li>
+          </ul>
+          <button class="cook-button">LET'S COOK!</button>
+        </div>
+      </div>
+      <!--Box for displaying the food results-->
+      <div class="box display-food">
+        <div class="start">
+          <img src="./assets/cookpot.svg" class="icon"/>
+        </div>
+        <div class="results hidden">
+          <h2 class="display-text">You should make:</h2>
+         <p id="result-text">Biscuits and Gravy</p>
+          <button class="empty-out">CLEAR</button>
+        </div>
+      </div>
+     </div>
+     <div class="added-recipe hidden">
+      <label class="footer-spacing" for="recipe-type">Recipe Type:</label>
+      <select id="recipe-type" name="dish-type" class="input-detailing">
+        <option value="null">[Choose an Option]</option>
+        <option id="meals" value="side">Side</option>
+        <option id="meals" value="main-dish">Main Dish</option>
+        <option id="meals" value="dessert">Dessert</option>
+      </select>
+      <!--  -->
+      <label class="footer-spacing" for="recipe-name">Recipe Name:</label>
+      <input type="text" id="recipe-name" class="input-detailing">
+      <button id="new-addition">ADD NEW</button>
+    </div>
+  </body>
+  <script type="text/javascript" src="./dishes.js"></script>
+  <script type="text/javascript" src="./main.js"></script>
+</html>
